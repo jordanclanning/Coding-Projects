@@ -1,0 +1,149 @@
+"""
+Jordan Lanning
+Midterm Exam
+3.14.2025
+CIST 120
+"""
+print("Welcome to the fitness calculator!!!")
+name = input("\nWhat is your name? ")
+gender = input("What is your gender? Male or Female? ")
+age = int(input("What is your age? "))
+weight = float(input("what is your weight in kilograms? "))
+height = float(input("what is your height in centimeters? "))
+activity_level = input("What is your activity level? 'Sedentary' 'Light' 'Moderate' or 'Active'"+"\nSendtary = little to no exercise"+"\nLight 
+= 1-3 days per week"+"\nModerate = 3-5 days per weeek" + "\nActive = 6-7 days per week"+"\n")
+water_intake = float(input("What is your daily water intake? Use liters "))
+if gender == "Male":
+ 
+bmr = 10*weight+6.25*height-5*age+5
+ 
+if activity_level == "Sedentary":
+ 
+calorie_cal = bmr*1.2
+ 
+elif activity_level == "Light":
+ 
+calorie_cal = bmr*1.375
+ 
+elif activity_level == "Moderate":
+ 
+calorie_cal = bmr*1.55
+ 
+elif activity_level == "Active":
+ 
+calorie_cal = bmr*1.725
+ 
+else:
+ 
+print("error. Enter valid option for ativity level")
+ 
+exit
+ 
+suggested_water = weight*.033
+ 
+print("\n"+"---Results---")
+ 
+print("\nYour name was: " + name)
+ 
+print("Your age was: " + str(age))
+ 
+print("Your weight was: " + str(weight) + "kg")
+ 
+print("Your Height was: " + str(height) + "cm")
+ 
+print("Your activity level was: " + activity_level)
+ 
+print("\nYour BMR was: " + str(bmr))
+ 
+print("Based on your information, your daily recommended calorie intake should be " + str(calorie_cal)+ " kcal")
+ 
+if suggested_water > water_intake:
+ 
+print("\nBased on your water intake, we recommend you drink more water. It is recommended you drink: " + str(suggested_water) + " 
+liters")
+ 
+else:
+ 
+print("\nYou are drinking enough water")
+ 
+elif gender == "Female":
+ 
+bmr = 10*weight+6.25*height-5*age-161
+ 
+if activity_level == "Sedentary":
+ 
+calorie_cal = bmr*1.2
+ 
+elif activity_level == "Light":
+ 
+calorie_cal = bmr*1.375
+ 
+elif activity_level == "Moderate":
+ 
+calorie_cal = bmr*1.55
+ 
+elif activity_level == "Active":
+ 
+calorie_cal = bmr*1.725
+ 
+else:
+ 
+print("you did not enter a valid activity level")
+ 
+exit
+ 
+suggested_water = weight*.033
+ 
+print("\n"+"---Results---")
+ 
+print("\nYour name was: " + name)
+ 
+print("Your age was: " + str(age))
+ 
+print("Your weight was: " + str(weight) + "kg")
+ 
+print("Your Height was: " + str(height) + "cm")
+ 
+print("Your activity level was: " + activity_level)
+ 
+print("\nYour BMR was: " + str(bmr))
+ 
+print("Based on your information, your daily recommended calorie intake should be " + str(calorie_cal)+ " kcal")
+ 
+if suggested_water > water_intake:
+ 
+print("\nBased on your water intake, we recommend you drink more water. It is recommended you drink: " + str(suggested_water)+" 
+liters")
+ 
+else:
+ 
+print("\nYou are drinking enough water")
+ 
+else:
+ 
+print("error. Please enter valid gender")
+### Results ###
+"""
+Welcome to the fitness calculator!!!
+What is your name? Jordan
+What is your gender? Male or Female? Male
+What is your age? 10
+what is your weight in kilograms? 10
+
+what is your height in centimeters? 10
+What is your activity level? 'Sedentary' 'Light' 'Moderate' or 'Active'
+Sendtary = little to no exercise
+Light = 1-3 days per week
+Moderate = 3-5 days per weeek
+Active = 6-7 days per week
+Light
+What is your daily water intake? Use liters 10
+---Results---
+Your name was: Jordan
+Your age was: 10
+Your weight was: 10.0kg
+Your Height was: 10.0cm
+Your activity level was: Light
+Your BMR was: 117.5
+Based on your information, your daily recommended calorie intake should be 161.5625 kcal
+You are drinking enough water
