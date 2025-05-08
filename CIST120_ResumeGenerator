@@ -1,0 +1,168 @@
+
+"""
+Resume Builder Final Project
+Jordan Lanning
+5.1.2025
+***Sample Results will show under the code***
+"""
+def generate_resume():
+ 
+print("")
+print("\t\t\tWELCOME TO CIST120'S RESUME WORKSHOP. PLEASE FOLLOW INSTRUCTIONS FOR FORMATTING PURPOSES.")
+print("")
+ 
+## collect user inputs
+ 
+fullName = input("What is your full name? (First Name, Middle Initial, Last Name) ")
+ 
+phoneNumber = input("What is your phone number? 
+(XXX)-XXX-XXXX format ")
+ 
+emailAddress = input("Enter your email address: ")
+ 
+print("\nAn objective or summary are used to briefly highly who you are and what you are looking for in a role.")
+ 
+objectiveSummary = input("Please tell me a little about yourself. Limit this to 2-3 sentences. ")
+ 
+## educational background
+ 
+## have a function to move on. continue/while degree is true, print questions to associate a new degree
+ 
+print("\nPlease list your most recent school/university. If you have not attended college, list your high school.")
+ 
+degree = input("What type of degree is it? Master of Science, Associate of Arts, High School Diploma, etc. 
+")
+ 
+universityName = input("What is the name of the institution? ")
+ 
+graduationYear = input("What year did you graduate or last attend? 
+YYYY format only ")
+ 
+## Work Experience
+ 
+print("\nIn this section, please list your appropriate work experience. If you never worked, list projects or relevant work even if its 
+not formal")
+ 
+jobTitle = input("What is the job title? ")
+ 
+companyName = input("What is the company name? ")
+ 
+print("\nNext, we will produce up to 4 relevant responsibilities.")
+ 
+jobResponsibilities1 = input("What is the first thing you want to mentioned about your work here? ")
+ 
+jobResponsibilities2 = input("What is the second thing you want to mentioned about your work here? ")
+ 
+jobResponsibilities3 = input("What is the third thing you want to mentioned about your work here? ")
+ 
+jobResponsibilities4 = input("What is the fourth thing you want to mentioned about your work here? ")
+ 
+employmentDate1 = input("When did you start? ONLY use MM/YYYY format ")
+ 
+employmentDate2 = input("When did you leave? ONLY use MM/YYYY format ")
+ 
+## Skills
+ 
+print("\nPlease list your 6 most relevant skills for this position. ")
+ 
+skill1=input("List your 1st skill: ")
+ 
+skill2=input("List your 2nd skill: ")
+ 
+skill3=input("List your 3rd skill: ")
+ 
+skill4=input("List your 4th skill: ")
+ 
+skill5=input("List your 5th skill: ")
+ 
+skill6=input("List your 6th skill: ")
+ 
+## Resume Generator
+ 
+resume = f"""
+ 
+ 
+{fullName}
+{phoneNumber} 
+| 
+{emailAddress}
+ 
+Objective/Summary
+{objectiveSummary}
+ 
+Education
+{degree} 
+{graduationYear}
+{universityName}
+ 
+Work Experience
+{jobTitle} 
+{employmentDate1}-{employmentDate2}
+{companyName}
+- {jobResponsibilities1}
+- {jobResponsibilities2}
+- {jobResponsibilities3}
+- {jobResponsibilities4}
+ 
+Skills
+{skill1} 
+{skill2} 
+{skill3}
+{skill4} 
+{skill5} 
+{skill6}
+ 
+ 
+ 
+"""
+ 
+return resume
+def save_resume_to_file(resume_content, filename="resume.txt"):
+ 
+with open(filename, 'w') as file:
+ 
+file.write(resume_content)
+def print_resume(resume_content):
+ 
+print(resume_content)
+
+def main():
+ 
+resume = generate_resume()
+ 
+print_resume(resume)
+ 
+save_resume_to_file(resume)
+if __name__=="__main__":
+ 
+main()
+"""
+ 
+ 
+Jordan C. Lanning
+(803)-554-7322 
+| 
+jordan.c.lanning@gmail.com
+ 
+Objective/Summary
+I want to be successful. I bring a lot to the table. I am self motivated. 
+ 
+Education
+Master of Science 
+2026
+Virginia Tech
+ 
+Work Experience
+Logistics Officer 
+09/2024-08/2024
+US Army
+- Conducted Risk Assessments
+- Mentored Troops
+- Performed Yoga Classes
+- Equal Opporuntity Leader
+ 
+Skills
+SQL 
+Python 
+Scripting
+Java Networking Vulernabilities
